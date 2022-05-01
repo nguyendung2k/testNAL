@@ -1,0 +1,16 @@
+@mixin maxWidth($q) {
+  @media screen and (max-width: $q) {
+    @content;
+  }
+}
+@mixin minWidth($q) {
+  @media screen and (min-width: $q) {
+    @content;
+  }
+}
+
+@mixin tablet($m, $w) {
+  @media screen and (min-width: $m) and (max-width: $w) {
+    @content;
+  }
+}

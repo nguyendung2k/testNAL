@@ -1,0 +1,70 @@
+html {
+  scroll-behavior: smooth;
+  font-family: "Noto Serif Japanese", sans-serif;
+}
+body {
+  font-size: 18px;
+  line-height: 1;
+  color: $primary-color;
+  overflow-x: hidden;
+}
+input,
+button,
+textarea,
+select {
+  font-size: 16px;
+  outline: none;
+  border: 0;
+}
+input {
+  line-height: normal;
+}
+a {
+  color: inherit;
+}
+
+p,
+span {
+  display: block;
+}
+
+section[id] {
+  scroll-margin-top: 30px;
+}
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 200vh;
+}
+
+main {
+  min-height: 200vh;
+}
+
+.gly-rotate-45 {
+  //   filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  display: inline-block;
+}
+
+.bg1 {
+  background-color: black;
+}
+
+.bg2 {
+  background-color: $bg-text;
+}
+.bg3 {
+  background-color: $bg-text-2;
+}
+
+section {
+  display: none;
+}
+footer {
+  display: none;
+}

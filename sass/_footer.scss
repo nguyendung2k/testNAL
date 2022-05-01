@@ -1,0 +1,31 @@
+.footer {
+  display: block;
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 2px solid black;
+
+    @include maxWidth(767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-contact {
+    &-title {
+      margin-bottom: 10px;
+      margin-top: 15px;
+    }
+  }
+
+  &-item {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  &-content {
+    span {
+      display: inline-block;
+      margin-left: 15px;
+    }
+  }
+}

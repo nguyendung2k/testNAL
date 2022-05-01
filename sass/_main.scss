@@ -1,0 +1,281 @@
+.main {
+  //   display: none;
+  display: flex;
+  padding-bottom: 150px;
+
+  @include tablet(768px, 1023px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include maxWidth(767px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    // padding-top: 200px;
+    padding-bottom: 100px;
+  }
+}
+
+.lastnew {
+  margin-top: 50px;
+  width: 70%;
+  @include tablet(768px, 1023px) {
+    width: 100%;
+    display: block;
+  }
+
+  @include maxWidth(767px) {
+    width: 100%;
+  }
+
+  &-header {
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: "";
+      display: block;
+      width: 130px;
+      height: 3px;
+      background: #feb139;
+      right: -120%;
+      top: 69%;
+      position: absolute;
+
+      @include maxWidth(767px) {
+        right: -95%;
+      }
+    }
+  }
+
+  &-image {
+    margin-right: 30px;
+
+    @include maxWidth(767px) {
+      width: 100%;
+    }
+  }
+
+  &-block {
+    display: flex;
+    margin-top: 30px;
+    padding-bottom: 40px;
+
+    @include tablet(768px, 1023px) {
+      isplay: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include maxWidth(767px) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-content {
+    &-name {
+      padding: 6px 6px;
+      display: inline-block;
+      border-radius: 3px;
+      border: none;
+      margin-bottom: 5px;
+      color: white;
+    }
+
+    &-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    &-date {
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    &-des {
+      margin-top: 30px;
+
+      span {
+        margin-left: 30px;
+        display: inline-block;
+      }
+      color: $secondary-color;
+
+      @include maxWidth(767px) {
+        line-height: 1.5;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-more {
+    float: right;
+    color: #ccc;
+    font-size: 18px;
+    align-items: center;
+    margin-top: 20px;
+    &:hover {
+      color: black;
+    }
+    transition: all 0.5s ease;
+
+    cursor: pointer;
+    &-icon {
+      margin-left: 5px;
+      font-size: 14px;
+    }
+  }
+}
+
+.popularnew {
+  width: 30%;
+  margin-left: 20px;
+
+  @include tablet(768px, 1023px) {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  @include maxWidth(767px) {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  &-header {
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: "";
+      display: block;
+      width: 93px;
+      height: 3px;
+      background: black;
+      right: -95%;
+      top: 74%;
+      position: absolute;
+    }
+  }
+
+  &-image {
+    margin-right: 10px;
+    @include tablet(768px, 1023px) {
+      width: 295px;
+      height: 250px;
+      margin-right: 30px;
+    }
+  }
+
+  &-block {
+    margin-top: 30px;
+    display: flex;
+  }
+
+  &-more {
+    float: right;
+    color: #ccc;
+    font-size: 18px;
+    align-items: center;
+    margin-top: 20px;
+    &:hover {
+      color: black;
+    }
+    transition: all 0.5s ease;
+
+    cursor: pointer;
+    &-icon {
+      margin-left: 5px;
+      font-size: 14px;
+    }
+  }
+
+  &-tag {
+    margin-top: 100px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 3px;
+      background-color: blue;
+      top: 75%;
+      right: 50%;
+
+      @include tablet(768px, 1023px) {
+        right: 76%;
+      }
+    }
+
+    &-title {
+      padding-top: 40px;
+
+      @include tablet(768px, 1023px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &-name {
+      margin-bottom: 45px;
+      span {
+        font-weight: bold;
+        display: inline-block;
+      }
+    }
+
+    &-images {
+      display: flex;
+      flex-direction: column;
+
+      @include tablet(768px, 1023px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &-image {
+      margin-bottom: 30px;
+
+      @include tablet(768px, 1023px) {
+        margin-bottom: 45px;
+      }
+    }
+  }
+
+  &-content {
+    &-name {
+      padding: 6px 6px;
+      display: inline-block;
+      border-radius: 3px;
+      border: none;
+      margin-bottom: 5px;
+      color: #ccc;
+    }
+
+    &-title {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    &-date {
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    &-des {
+      span {
+        margin-left: 30px;
+        display: inline-block;
+      }
+      color: $secondary-color;
+    }
+  }
+}
+
+@include maxWidth(767px) {
+  .img {
+    width: 100%;
+  }
+}
